@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <title>Internship Preview</title> 
+    <link rel="stylesheet" href="homepage2.css">
+   
+    </head>
+    
+    <body>
+        <script type="text/javascript">
+        var myNodelist= document.getElementsByTagName("LI");
+            var i;
+            for (i= 0; i< myNodelist.length; i++){
+                var span =
+                    document.createElement("SPAN");
+                var txt =
+                    document.createTextNode("\u00D7");
+                span.className="close";
+                span.appendChild(txt);
+                myNodelist[i].appendChild(span);
+            }
+            var close =document.getElementsByClassName("close");
+            var i;
+            for (i =0; i <close.length; i++)
+                {
+                    close[i].onclick =function(){
+                        var div = this.parentElement;
+                        div.style.display="none";
+                        
+                    }
+                }
+            var list = document.querySelector('ul');
+            
+        </script>
+    <div id=" myDIV" class="header">
+        <h2> To Do List</h2>
+        <input type="text" id="my input" placeholder="title">
+        <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+        <ul id="myUl">
+             <li> Hit the gym</li>
+             <li class="checked"> read a novel</li>
+             <li> visit  a friend</li>
+             <li> practice programming</li>
+        </ul>
+    </body>
+</html>
